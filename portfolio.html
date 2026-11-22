@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Green Bear IA — Portfolio</title>
+  <meta name="description" content="Les réalisations et accompagnements de Green Bear IA.">
+  <meta name="theme-color" content="#0b3d2e">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <img class="logo__mark" src="assets/img/GreenBear.png" width="1200" height="896" alt="Logo Green Bear IA : tête d'ours stylisée dans des tons verts">
+        <span>Green Bear <span class="logo__accent">IA</span></span>
+      </a>
+      <a class="header-bear" href="index.html" aria-label="Ours blanc Green Bear IA : retour à l'accueil">
+        <svg class="header-bear__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true" focusable="false">
+          <circle class="header-bear__fur" cx="16" cy="18" r="8"/>
+          <circle class="header-bear__fur" cx="48" cy="18" r="8"/>
+          <circle class="header-bear__inner" cx="16" cy="18" r="4"/>
+          <circle class="header-bear__inner" cx="48" cy="18" r="4"/>
+          <ellipse class="header-bear__fur" cx="32" cy="35" rx="21" ry="19"/>
+          <ellipse class="header-bear__muzzle" cx="32" cy="43" rx="10" ry="8"/>
+          <circle class="header-bear__feature" cx="24" cy="31" r="2.4"/>
+          <circle class="header-bear__feature" cx="40" cy="31" r="2.4"/>
+          <ellipse class="header-bear__feature" cx="32" cy="39.5" rx="4" ry="3"/>
+          <path class="header-bear__mouth" d="M32 42.5 V45.5 M28.5 46 Q32 48.5 35.5 46"/>
+        </svg>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Menu principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html">Accueil</a></li>
+          <li><a class="main-nav__link" href="contact.html">Contact</a></li>
+          <li><a class="main-nav__link" href="portfolio.html" aria-current="page">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="container">
+        <span class="hero__tag">&lt;portfolio /&gt;</span>
+        <h1>Portfolio</h1>
+        <p class="hero__lead">Découvrez nos réalisations et accompagnements autour de l'IA.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Nos réalisations</h2>
+        <p class="section__intro">Parcourez les projets et formations menés par Green Bear IA, et filtrez-les selon leur type.</p>
+
+        <!-- Les cartes sont générées à partir de assets/js/portfolio-data.js : c'est ce fichier qu'il faut compléter. -->
+        <div class="portfolio-filters" id="portfolio-filters" role="group" aria-label="Filtrer par type" hidden>
+          <button class="filter-btn" type="button" data-filter="tout" aria-pressed="true">Tout <span class="filter-btn__count"></span></button>
+          <button class="filter-btn" type="button" data-filter="projet" aria-pressed="false">Projets <span class="filter-btn__count"></span></button>
+          <button class="filter-btn" type="button" data-filter="formation" aria-pressed="false">Formations <span class="filter-btn__count"></span></button>
+        </div>
+        <p class="portfolio-status" id="portfolio-status" aria-live="polite"></p>
+        <ul class="portfolio-list" id="portfolio-list"></ul>
+        <noscript>
+          <p class="placeholder">Activez JavaScript dans votre navigateur pour afficher la liste des réalisations.</p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; Green Bear IA</p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/portfolio-data.js"></script>
+  <script src="assets/js/portfolio.js"></script>
+</body>
+</html>
