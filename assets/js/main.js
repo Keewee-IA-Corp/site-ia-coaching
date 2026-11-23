@@ -1,4 +1,29 @@
-/* Green Bear IA — JavaScript partagé : menu mobile */
+/* Green Bear IA — JavaScript partagé : menu mobile, ours de l'en-tête */
+
+/* Ours blanc de l'en-tête : lien vers l'accueil (href="index.html").
+   Depuis l'accueil, la page se recharge ; on remonte d'abord en haut pour
+   que le navigateur ne restaure pas l'ancienne position de défilement. */
+(function () {
+  "use strict";
+
+  var bear = document.querySelector(".header-bear");
+  if (!bear) {
+    return;
+  }
+
+  function withoutHash(url) {
+    return url.split("#")[0];
+  }
+
+  // L'événement « click » est aussi déclenché par la touche Entrée au clavier.
+  bear.addEventListener("click", function () {
+    if (withoutHash(bear.href) === withoutHash(window.location.href)) {
+      window.scrollTo(0, 0);
+    }
+  });
+})();
+
+/* Menu mobile */
 (function () {
   "use strict";
 

@@ -178,6 +178,11 @@ a:hover {
   display: inline-flex;
   margin-bottom: var(--space-s);
   border-radius: var(--radius);
+  transition: transform var(--transition);
+}
+
+.header-bear:hover {
+  transform: scale(1.08);
 }
 
 .header-bear__icon {

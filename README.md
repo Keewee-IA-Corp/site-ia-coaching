@@ -19,6 +19,7 @@ Site vitrine statique de **Green Bear IA**, activité de formation et de coachin
 
 L'en-tête, le menu (Accueil, Contact, Portfolio) et le pied de page sont recopiés à l'identique dans chaque page.
 Un pictogramme d'ours blanc (SVG intégré, lien vers l'accueil) est centré dans l'en-tête ; sur les écrans de moins de 480 px, il passe sur sa propre ligne, sous le logo et le bouton « Menu ».
+Un clic (ou Tab puis Entrée) sur l'ours ramène à l'accueil depuis n'importe quelle page ; sur l'accueil, la page se recharge en haut.
 Sur mobile, le menu se replie derrière un bouton « Menu » (`assets/js/main.js`) ; sans JavaScript, il reste affiché.
 
 ## Structure
@@ -26,7 +27,7 @@ Sur mobile, le menu se replie derrière un bouton « Menu » (`assets/js/main.js
 ```
 index.html, contact.html, portfolio.html
 assets/css/style.css   feuille de style unique
-assets/js/main.js      menu mobile
+assets/js/main.js      menu mobile, retour en haut via l'ours de l'en-tête
 assets/js/portfolio-data.js  contenu du portfolio (à compléter)
 assets/js/portfolio.js       affichage et filtre du portfolio
 assets/img/            images
